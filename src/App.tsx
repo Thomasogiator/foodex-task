@@ -1,8 +1,13 @@
+import MainBody from "./components/landingPage/MainBody";
+import Navbar from "./components/landingPage/Navbar";
+import WaitListForm from "./components/landingPage/WaitListForm";
 
 function App() {
   return (
     <div>
-      Food app
+      <Navbar/>
+      <WaitListForm/>
+      <MainBody/>
     </div>
   );
 }

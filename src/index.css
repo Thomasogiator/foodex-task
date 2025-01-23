@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-Black.otf') format('otf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-ExtraBold.otf') format('otf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-ExtraLight.otf') format('otf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: url('/src/components/fonts/Pangram-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +59,501 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 3px 0px #00000008;
+  height: 72px;
+  padding: 0 23.5px;
+}
+
+.nav-container-right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-container-right > button{
+  background: #D87023;
+  width: 114px;
+  height: 32px;
+  border-radius: 32px;
+  border: 2px solid #FFFFFF;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #E9EBEA;
+}
+
+.waitlist-form-cover{
+  background-color: #0E0E0E;
+  background-image: url("/src/components/assets/waitlistbackground.svg");
+  border-radius: 7.19px;
+  /* min-width: 343px; */
+  width: 87.95%;
+  height: 659px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.waitlist-form{
+  padding-top: 98px;
+  /* min-width: 310px; */
+  width: 90.34%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.waitlist-form > p:first-of-type{
+  font-family: "Pangram", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 9.93px;
+  letter-spacing: 0.095em;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.waitlist-form > p:first-of-type > img{
+  display: flex;
+  align-items: center;
+}
+
+.waitlist-form > h2{
+  /* position: relative; */
+  margin: auto;
+  padding-top: 12px !important;
+  padding-bottom: 3px;
+  font-family: "Pangram", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 35.75px;
+  /* text-align: center; */
+  color: #FFFFFF;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 105%;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.waitlist-form > h2 > span{
+  font-family: "Courgette", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 35.75px;
+  text-align: left;
+  color: #009F79;
+  position: relative;
+  margin-top: -4px !important;
+  opacity: 1;
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+
+.waitlist-form > h2 > span.fade-in {
+  opacity: 1;
+}
+
+.waitlist-form > h2 > span.fade-out {
+  opacity: 0;
+}
+
+.stroke{
+  position: absolute;
+  bottom: -2px;
+  left: -5px;
+  width: 100%;
+}
+
+.stroke-cover{
+  display: flex;
+  align-items: flex-end;
+  width: 10px;
+  
+}
+
+.stroke-cover > img{
+  width: 100%;
+}
+
+.waitlist-form > p:last-of-type{
+  font-family: "Sofia Sans" sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: auto;
+  margin-top: 22px;
+  min-width: 269px;
+  width: 86.8%;
+}
+
+.waitlist-form > div{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.waitlist-form > div > input{
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #D6DAD9;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.waitlist-form > div > input::placeholder{
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.3px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #1A1A1A;
+}
+
+.waitlist-form-button{
+  margin-top: 14px;
+  width: 200px;
+  height: 56px;
+  gap: 0px;
+  border-radius: 56px;
+  border: 2px solid #FFFFFF;
+  background: #009F79;
+  color: #E9EBEA;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.waitlist-slider{
+  position: relative;
+}
+
+.waitlist-slider > div:first-of-type{
+  display: flex;
+  align-items: center;
+  margin-left: 60%;
+}
+
+.waitlist-slider > div:first-of-type > img{
+  z-index: 10;
+}
+
+.waitlist-slider > div:last-of-type{
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+}
+
+.slider-container {
+  width: 100%;
+  height: 120.06px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  position: absolute;
+  animation: scroll-left 10s linear infinite;
+  gap: 5.79px;
+}
+
+.slider-item {
+  width: 101.61px;
+  height: 120.06px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4.79px 6.71px 0px #00000014;
+  border-radius: 5.75px;
+}
+
+.slider-item > img{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.main-section{
+  margin-top: 50px;
+}
+
+.main-section1{
+  position: relative;
+  width: 78.97%;
+  margin: auto;
+}
+
+.main-section1 > img:first-of-type{
+  position: absolute;
+  top: 47px;
+  left: -41px;
+  z-index: -10;
+}
+
+.main-section1 > img:last-of-type{
+  position: absolute;
+  top: 30px;
+  right: -43px;
+  z-index: -10;
+}
+
+.main-section1 > p:first-of-type{
+  font-family: "Pangram", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.095em;
+  text-align: center;
+  color: #353542;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.main-section1 > p:first-of-type > span{
+  display: flex;
+  align-items: center;
+}
+
+.main-section1 > h2{
+  margin: 0;
+  margin-top: 24px;
+  font-family: "Pangram", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 46px;
+  text-align: center;
+  color: #353542;
+}
+
+.main-section1 > h2 > button{
+  width: 133px;
+  height: 37px;
+  /* padding: 2px 16px 4px 16px; */
+  border-radius: 19.12px;
+  border: 1.91px 0px 0px 0px;
+  background: #D87023;
+  border: 1.91px solid #000000;
+  box-shadow: 0px 5.74px 7.65px 0px #00000029;
+  font-family: "Sofia Sans";
+  font-size: 22.94px;
+  font-weight: 400;
+  line-height: 30.59px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.main-section1 > p:last-of-type{
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  margin: 0;
+  margin-top: 32px;
+}
+
+.main-section2{
+  margin: auto;
+  margin-top: 56px;
+  width: 87.69%;
+  /* height: 714px; */
+  border-radius: 8.95px;
+  background: #FFF8F2;
+  position: relative;
+}
+
+.main-section2 > img:first-of-type{
+  position: absolute;
+  top: 21.73px;
+  left: 0;
+}
+
+.main-section2 > img:last-of-type{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.main-section2 > div:first-of-type{
+  width: 80.7%;
+  max-width: 280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  padding-top: 1.5rem;
+}
+
+.grid-item{
+  z-index: 20;
+  box-shadow: 0px 4.06px 5.69px 0px #00000014;
+  border-radius: 4.88px;
+  height: 101.98px;
+}
+
+.grid-item > img{
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+.add-opacity{
+  opacity: 50%;
+}
+
+.reduce-space{
+  margin-top: -5px;
+}
+
+.main-section2 > div:last-of-type{
+  position: relative;
+  width: 74.21%;
+  max-width: 280px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.main-section2 > div:last-of-type > img{
+  width: 100%;
+}
+
+.main-note{
+  position: absolute;
+  top: 60px;
+  right: -35px;
+}
+
+.note:nth-of-type(2){
+  position: absolute;
+  bottom: 85px;
+  left: -35px;
+}
+
+.note:nth-of-type(3){
+  position: absolute;
+  bottom: 53px;
+  left: 0;
+}
+
+.note:nth-of-type(4){
+  position: absolute;
+  bottom: 21px;
+  left: 28px;
+}
+
+.separator{
+  margin: 56px auto;
+  border: 4px solid #EEEEEE;
+  width: 87.69%;
+}
+
+.main-section3{
+  width: 87.69%;
+  margin: auto;
+  border: 1px solid #EDEFFC;
+  box-shadow: 0px 20px 28px 0px #00000014;
+  padding: 56px 34.5px 32px 34.5px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.main-section3 > div{
+  font-family: 'Pangram', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: left;
+  color: #353542;
+  margin-bottom: 60px;
+}
+
+.main-section3 > div > button:first-of-type{
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  padding: 2px 12px 4px 12px;
+  border-radius: 40px;
+  border: 2px solid #000000;
+  color: #FFFFFF;
+  background: #5F63E1;
+}
+
+.main-section3 > div > button:last-of-type{
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 2px 12px 4px 12px;
+  gap: 10px;
+  border-radius: 40px;
+  border: 2px 0px 0px 0px;
+  background: #000000;
+  border: 2px solid #009F79;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(calc(-100% + 100vw));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
