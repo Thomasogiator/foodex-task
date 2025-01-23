@@ -4,10 +4,14 @@ import WaitListForm from "./components/landingPage/WaitListForm";
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <WaitListForm/>
-      <MainBody/>
+    <div className="container">
+      <div className="navbar">
+        <Navbar/>
+        <WaitListForm/>
+      </div>
+      <div>
+        <MainBody/>
+      </div>
     </div>
   );
 }

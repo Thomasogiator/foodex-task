@@ -9,8 +9,11 @@ import cloud1 from '../assets/cloud1.svg';
 import cloud2 from '../assets/cloud 2.svg';
 import manPic from '../assets/emmanuel-ikwuegbu-81fRHbVliQI-unsplash 1.svg';
 import { foodItems } from './Slider';
+import useWindowSize from '../helpers/useWindowSize';
 
 const MainBody: React.FC=()=>{
+    const windowSize = useWindowSize()
+    
     return(
         <div className="main-section">
             <section className="main-section1">
@@ -19,9 +22,15 @@ const MainBody: React.FC=()=>{
                         JOIN THE CHOWAFRICA WAITLIST
                     <span><img src={blackstar} alt='blackstar'/></span>
                 </p>
-                <h2>
-                    Are you tired of eating the same dishes <button>everyday?</button>
-                </h2>
+                {windowSize?.width < 768 ? 
+                    <h2>
+                        Are you tired of eating the same dishes <button>everyday?</button>
+                    </h2> :
+                    <h2>
+                        tired of eating the
+                        <button>🍛 same dishes everyday? 🍝</button>
+                    </h2>
+                }
                 <p>Do you crave new and exciting dishes? Look no further! Chow is the perfect solution for discovering your next dish.</p>
                 <img src={cloud1} alt="cloud" />
                 <img src={cloud2} alt="cloud" />
@@ -30,8 +39,8 @@ const MainBody: React.FC=()=>{
                 <div>
                     {foodItems.map((food)=> <div className={food.id !==1 && food.opacity === false ? 'grid-item reduce-space' : food.id === 1 ? 'grid-item' : 'grid-item add-opacity'}><img src={food.image} alt="item" /></div>)}
                 </div>
-                <img src={loveVec1} alt='vec' />
-                <img src={loveVec2} alt='vec' />
+                <img src={windowSize.width < 768 ? loveVec1 : loveVec2} alt='vec' />
+                <img src={windowSize.width < 768 ? loveVec2 : loveVec1} alt='vec' />
                 <div>
                     <img src={manPic} alt="human" />
                     <div className='main-note'>
@@ -48,9 +57,9 @@ const MainBody: React.FC=()=>{
                     </div>
                 </div>
             </section>
-            <div className='separator'></div>
+            {windowSize.width < 768 && <div className='separator'></div>}
             <section className='main-section3'>
-                <div>Signup to <button>chowafrica</button> today and say <button>goodbye 👋🏽</button> to mealtime stress.</div>
+                {windowSize.width < 768 ? <div>Signup to <button>chowafrica</button> today and say <button>goodbye 👋🏽</button> to mealtime stress.</div> : <div>Signup to <button>chowafrica</button> and say <button>goodbye 👋🏽</button> to mealtime stress.</div>}
                 <button className='waitlist-form-button'>JOIN WAITLIST</button>
             </section>
         </div>

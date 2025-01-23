@@ -12,7 +12,7 @@ const WaitListForm: React.FC =()=>{
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
       }, [texts.length]);
 
